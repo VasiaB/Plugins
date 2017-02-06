@@ -1,0 +1,276 @@
+@import "mixin";
+$t: rgba(0,0,0,0.5);
+//@include centerxt(640px,100%,0px);
+//@include placetl(190px,80px,0px,5px,url('../img/logo.png'));
+//@include btntl(190px,80px,0px,5px,url('../img/logo.png'));
+//@include css3Wap(animation, next 1.5s cubic-bezier(0.7, 0.01, 0.34, 0.99) 0s infinite normal);
+//@include css3Wap(animation, step 1.2s steps(2) 0s infinite);
+//@include css3Wap(transition, all 1s);
+//@include slideBtn(50px,50px,0px,url('../img/btn-slide.png'));
+//@include font(20px,30px,#000);
+//@include formFormat(375px,50px,$t);
+//@include css3Wap(transform, translate3d(0,0,0));
+//@include css3Wap(transform-origin, 108px 243px);
+
+.s{
+	width: 640px; height: 100%;
+	position: absolute; top: 0; left: 0;
+	overflow: hidden; 
+	-webkit-transform-style: preserve-3d; -webkit-backface-visibility: hidden;
+	background-size: cover; background-position: center center;
+	/* background-image: url('../img/bg.jpg'); */
+	background-color: #0d0251;
+	@include css3Wap(transition, opacity 1s);
+}
+.box{@include center(640px,1030px);}
+.cont{@include placetl(640px,1030px,0,0);pointer-events: none;}
+.contb{@include centerxt(800px,1030px);pointer-events: none;}
+.contbb{@include center(800px,1200px);pointer-events: none;}
+.s .step{background-position: 0 0;}
+.s0{
+	width: 100%; height: 100%; overflow: hidden; background-color: #0d0251;
+	display: none;
+	&.active{display: block;}
+	.main{
+		@include placetl(1729px,100%,0,0);
+		.map{
+			&.active{@include css3Wap(transition, opacity 1s);}
+			@include placetl(1729px,1030px,0,0,url('../img/s0/bg.jpg'));
+			.dots{@include placetl(1729px,1030px,0,0,url('../img/s0/dots.png'));@include css3Wap(animation, flash 3s ease infinite);}
+			.part{
+				.dot{
+					@include placetl(60px,60px,0,0,url('../img/dot.png'));@include css3Wap(animation, scale0 2s ease-in-out infinite);
+					&.over{opacity:0;}
+				}
+				&.unclickable{pointer-events:none;}
+			}
+			.part0{
+				@include placebl(650px,464px,0,0);
+				.dot{top: 226px; left: 382px;}
+				.back{@include placetl(650px,464px,0,0,url('../img/s0/p0-back.png'));}
+				.people-box{
+					@include placetl(650px,464px,0,0);@include css3Wap(animation, sway2 2s ease infinite);
+					.people{@include placetl(650px,464px,0,0,url('../img/s0/p0-couple.png'));background-position:0 0;@include css3Wap(animation, step .7s steps(1) infinite);}
+				}
+			}
+			.part1{
+				@include placetl(290px,342px,270px,8px);
+				.dot{top: 146px; left: 62px;}
+				.tire-box{
+					@include placetl(290px,342px,0,0,url('../img/s0/p1-tire.png'));@include css3Wap(animation, sway1 1.9s ease infinite);
+					.leg0{@include placetl(290px,342px,0,0,url('../img/s0/p1-tire-leg0.png'));@include css3Wap(transform-origin, 85px 110px);@include css3Wap(animation, rotate2 2.5s ease infinite);}
+					.leg1{@include placetl(290px,342px,0,0,url('../img/s0/p1-tire-leg1.png'));@include css3Wap(transform-origin, 198px 200px);@include css3Wap(animation, rotate1R 2.5s ease infinite);}
+				}
+			}
+			.part2{
+				@include placetl(298px,405px,93px,294px);
+				.dot{top: 155px; left: 145px;}
+				.main-box{
+					@include placetl(298px,405px,0,0,url('../img/s0/p2-main.png'));
+					.cloud0{@include placetl(298px,405px,0,0,url('../img/s0/p2-main-cloud0.png'));@include css3Wap(animation, shake2 2.1s ease infinite);}
+					.cloud1{@include placetl(298px,405px,0,0,url('../img/s0/p2-main-cloud1.png'));@include css3Wap(animation, shake1 1.9s ease infinite);}
+				}
+			}
+			.part3{
+				@include placetl(450px,377px,26px,1195px);
+				.dot{top: 160px; left: 255px;}
+				.person{@include placetl(450px,377px,0,0,url('../img/s0/p3-person.png'));background-position:0 0;@include css3Wap(animation, step 1s steps(1) infinite);}
+			}
+			.part4{
+				@include placebr(395px,506px,0,42px);
+				.dot{top: 190px; left: 211px;}
+				.paper{@include placetl(395px,506px,0,0,url('../img/s0/p4-paper.png'));@include css3Wap(animation, shake2 1s ease infinite);}
+				.person{@include placetl(395px,506px,0,0,url('../img/s0/p4-person.png'));background-position:0 0;@include css3Wap(animation, step .7s steps(1) infinite);}
+			}
+			.stairs{@include placetl(1729px,1030px,0,0,url('../img/s0/stairs.png'));pointer-events:none;}
+			.earth{
+				@include placetl(600px,1030px,0px,669px,url('../img/s0/earth.png'));background-position:0 0;pointer-events:none;
+				&.earth1{background-position: -600px 0;}
+				&.earth2{background-position: -1200px 0;}
+				&.earth3{background-position: -1800px 0;}
+				&.earth4{background-position: -2400px 0;}
+				&.earth5{background-position: -3000px 0;}
+			}
+			.mask{
+				@include placetl(1729px,1030px,0,0,url('../img/s0/mask.jpg'));background-position: 0 0;
+				&.active{@include css3Wap(animation, stepY .5s steps(1) 0s 3);}
+			}
+		}
+	}
+	.hint-box{
+		@include placetl(100%,100%,0,0,$t);
+		.hint{@include center(144px,26px,url('../img/s0/hint.png'));}
+	}
+}
+
+.popup-hint-box{
+	/* display: block; */
+	@include center(800px,1030px,url('../img/popup-hint.png'));
+	.btn-close-box{@include btntr(70px,70px,280px,190px);}
+}
+
+/* ani */
+@include keyframesWap(stepY){
+0%{opacity: 1;}
+50%{background-position: 0 100%;}
+100%{opacity: 1;}
+}
+@include keyframesWap(stepYEarth){
+100%{background-position: 0 50%;}
+}
+@include keyframesWap(step){
+0%{opacity: 1;}
+50%{background-position: 100% 0;}
+100%{opacity: 1;}
+}
+@include keyframesWap(stepFTitle){
+0%{opacity:1;}
+100%{background-position: 133.3% 0;opacity:1;}
+}
+@include keyframesWap(stepFPinch){
+0%{opacity:1;}
+100%{background-position: 114.3% 0;opacity:1;}
+}
+@include keyframesWap(stepFCar){
+100%{background-position: 100% 0;}
+}
+@include keyframesWap(stepFFire){
+100%{background-position: 116.6% 0;}
+}
+@include keyframesWap(stepFDot){
+100%{background-position: 100% 0;}
+}
+@include keyframesWap(flash){
+0%,100%{opacity:1;}
+50%{opacity:0;}
+}
+@include keyframesWap(flash0){
+0%,100%{opacity:1;}
+50%{opacity:.5;}
+}
+@include keyframesWap(zoomIn){
+0%{@include css3Wap(transform, scale(1));opacity:1;}
+100%{@include css3Wap(transform, scale(1));opacity:0;}
+}
+@include keyframesWap(scale0){
+0%,100%{@include css3Wap(transform, scale(1));}
+50%{@include css3Wap(transform, scale(1.2));}
+}
+@include keyframesWap(shake0){
+0%,100%{@include css3Wap(transform, translateX(0));}
+50%{@include css3Wap(transform, translateX(3px));}
+}
+@include keyframesWap(shake1){
+0%,100%{@include css3Wap(transform, translateX(0));}
+50%{@include css3Wap(transform, translateX(6px));}
+}
+@include keyframesWap(shake2){
+0%,100%{@include css3Wap(transform, translateX(0));}
+50%{@include css3Wap(transform, translateX(9px));}
+}
+@include keyframesWap(sway0){
+0%,100%{@include css3Wap(transform, translateY(0));}
+50%{@include css3Wap(transform, translateY(3px));}
+}
+@include keyframesWap(sway1){
+0%,100%{@include css3Wap(transform, translateY(0));}
+50%{@include css3Wap(transform, translateY(6px));}
+}
+@include keyframesWap(sway2){
+0%,100%{@include css3Wap(transform, translateY(0));}
+50%{@include css3Wap(transform, translateY(9px));}
+}
+@include keyframesWap(rotate){
+0%{@include css3Wap(transform, rotate(0));}
+100%{@include css3Wap(transform, rotate(360deg));}
+}
+@include keyframesWap(rotateR){
+0%{@include css3Wap(transform, rotate(0));}
+100%{@include css3Wap(transform, rotate(-360deg));}
+}
+@include keyframesWap(rotate0){
+0%,100%{@include css3Wap(transform, rotate(0deg));}
+50%{@include css3Wap(transform, rotate(5deg));}
+}
+@include keyframesWap(rotate0R){
+0%,100%{@include css3Wap(transform, rotate(0deg));}
+50%{@include css3Wap(transform, rotate(-5deg));}
+}
+@include keyframesWap(rotate1){
+0%,100%{@include css3Wap(transform, rotate(0deg));}
+50%{@include css3Wap(transform, rotate(10deg));}
+}
+@include keyframesWap(rotate1R){
+0%,100%{@include css3Wap(transform, rotate(0deg));}
+50%{@include css3Wap(transform, rotate(-10deg));}
+}
+@include keyframesWap(rotate2){
+0%,100%{@include css3Wap(transform, rotate(0deg));}
+50%{@include css3Wap(transform, rotate(15deg));}
+}
+@include keyframesWap(s1eyes){
+0%,100%{@include css3Wap(transform, translate(0,0));}
+50%{@include css3Wap(transform, translate(16px,-6px));}
+}
+@include keyframesWap(s1ball0){
+0%{@include css3Wap(transform, translate(350px,800px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:.4;}
+}
+@include keyframesWap(s1ball1){
+0%{@include css3Wap(transform, translate(250px,500px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:.6;}
+}
+@include keyframesWap(s1ball2){
+0%{@include css3Wap(transform, translate(-230px,550px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:1;}
+}
+@include keyframesWap(s1ball3){
+0%{@include css3Wap(transform, translate(270px,310px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:1;}
+}
+@include keyframesWap(s1ball4){
+0%{@include css3Wap(transform, translate(60px,400px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:1;}
+}
+@include keyframesWap(s1ball5){
+0%{@include css3Wap(transform, translate(-200px,400px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:1;}
+}
+@include keyframesWap(s1ball6){
+0%{@include css3Wap(transform, translate(100px,200px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:1;}
+}
+@include keyframesWap(s1ball7){
+0%{@include css3Wap(transform, translate(-100px,150px));opacity:1;}
+100%{@include css3Wap(transform, translate(0,0));opacity:1;}
+}
+
+@include keyframesWap(moveOutTR){
+0%{@include css3Wap(transform, translate(0,0));}
+100%{@include css3Wap(transform, translate(100%,-100%));}
+}
+@include keyframesWap(moveOutBL){
+0%{@include css3Wap(transform, translate(0,0));}
+100%{@include css3Wap(transform, translate(-100%,100%));}
+}
+
+@include keyframesWap(loadp1){
+0%,100%{@include css3Wap(transform, translate(0,0));}
+50%{@include css3Wap(transform, translate(-3px,8px));}
+}
+@include keyframesWap(loadp2){
+0%,100%{@include css3Wap(transform, translate(0,0));}
+50%{@include css3Wap(transform, translate(0,-15px));}
+}
+
+@include keyframesWap(p3PumpkinHat){
+0%,100%{@include css3Wap(transform, translate(0,0));}
+50%{@include css3Wap(transform, translate(8px,-15px));}
+}
+/* for responsive ######################################################################################## responsive */
+@media (max-height: 980px){
+	.scale{@include css3Wap(transform, scale(0.9));}
+}
+@media (max-height: 880px){
+	.scale{@include css3Wap(transform, scale(0.8));}
+}
