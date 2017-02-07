@@ -100,7 +100,6 @@ h1, p, a {
   -webkit-backface-visibility: hidden;
   background-size: cover;
   background-position: center center;
-  /* background-image: url('../img/bg.jpg'); */
   background-color: #0d0251;
   -webkit-transition: opacity 1s;
   transition: opacity 1s; }

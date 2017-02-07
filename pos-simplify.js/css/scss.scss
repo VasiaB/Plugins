@@ -1,16 +1,5 @@
 @import "mixin";
 $t: rgba(0,0,0,0.5);
-//@include centerxt(640px,100%,0px);
-//@include placetl(190px,80px,0px,5px,url('../img/logo.png'));
-//@include btntl(190px,80px,0px,5px,url('../img/logo.png'));
-//@include css3Wap(animation, next 1.5s cubic-bezier(0.7, 0.01, 0.34, 0.99) 0s infinite normal);
-//@include css3Wap(animation, step 1.2s steps(2) 0s infinite);
-//@include css3Wap(transition, all 1s);
-//@include slideBtn(50px,50px,0px,url('../img/btn-slide.png'));
-//@include font(20px,30px,#000);
-//@include formFormat(375px,50px,$t);
-//@include css3Wap(transform, translate3d(0,0,0));
-//@include css3Wap(transform-origin, 108px 243px);
 
 .s{
 	width: 640px; height: 100%;
@@ -18,7 +7,6 @@ $t: rgba(0,0,0,0.5);
 	overflow: hidden; 
 	-webkit-transform-style: preserve-3d; -webkit-backface-visibility: hidden;
 	background-size: cover; background-position: center center;
-	/* background-image: url('../img/bg.jpg'); */
 	background-color: #0d0251;
 	@include css3Wap(transition, opacity 1s);
 }
