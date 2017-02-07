@@ -1,0 +1,225 @@
+/* css reset */
+html,body,ul,p,h1,h2,h3,form,input{margin:0;padding:0;font-family:"Microsoft YaHei", Arial, Helvetica, sans-serif;}
+body,html{width:100%;height:100%;}
+div{position:relative;}
+a,a:hover{display:inline-block;*display:inline;zoom:1;text-decoration:none;}
+ul{font-size: 0;}
+li{list-style:none;}
+img{border:none;vertical-align:top;}
+body{-webkit-tap-highlight-color:rgba(0,0,0,0);}/*点击时不出现黑块*/
+/* css reset end */
+/* momo's default */
+.btn-box .btn, .inline{display:inline-block;*display:inline;zoom:1;}
+.btn-box{
+	font-size: 0; 
+	position: absolute;
+	transition: all .1s ease;
+	-webkit-transition: all .1s ease;
+	pointer-events: all;
+}
+.btn{text-align:center;cursor:pointer;}
+.popup-box{display: none; z-index:99;}
+/* .bg{display:none;position:fixed;width:100%;height:100%;background: #000;opacity:0.8;filter:Alpha(opacity=80);top:0;left:0;z-index:98;} */
+.bg{display:none;position:fixed;width:100%;height:100%;background: rgba(0,0,0,0.8);top:0;left:0;z-index:98;}
+.centertop{-webkit-transform-origin: center top;transform-origin: center top;}
+.centerbot{-webkit-transform-origin: center bottom;transform-origin: center bottom;}
+.action{opacity:0;pointer-events:none;&.active{opacity:1;pointer-events:all;}}
+/* momo's default end */
+body{background: #fff;}
+h1,p,a{color: #fff;}
+
+@mixin center($width,$height,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -($width)/2;
+	margin-top: -($height)/2;
+	background: $url no-repeat center;
+}
+@mixin centerxt($width,$height,$top:0px,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	top: $top;
+	left: 50%;
+	margin-left: -($width)/2;
+	background: $url no-repeat center;
+}
+@mixin centerxb($width,$height,$bottom:0px,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	bottom: $bottom;
+	left: 50%;
+	margin-left: -($width)/2;
+	background: $url no-repeat center;
+}
+@mixin placetl($width,$height,$top,$left:0px,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	top: $top;
+	left: $left;
+	background: $url no-repeat center;
+}
+@mixin placetr($width,$height,$top,$right:0px,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	top: $top;
+	right: $right;
+	background: $url no-repeat center;
+}
+@mixin placebl($width,$height,$bottom,$left:0px,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	bottom: $bottom;
+	left: $left;
+	background: $url no-repeat center;
+}
+@mixin placebr($width,$height,$bottom,$right:0px,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	bottom: $bottom;
+	right: $right;
+	background: $url no-repeat center;
+}
+@mixin btntl($width,$height,$top,$left:0px,$url:none){
+	.btn{
+		width: $width;
+		height: $height;
+		background: $url no-repeat center;
+	}
+	position: absolute;
+	top: $top;
+	left: $left;
+}
+@mixin btntr($width,$height,$top,$right:0px,$url:none){
+	.btn{
+		width: $width;
+		height: $height;
+		background: $url no-repeat center;
+	}
+	position: absolute;
+	top: $top;
+	right: $right;
+}
+@mixin btnbl($width,$height,$bottom,$left:0px,$url:none){
+	.btn{
+		width: $width;
+		height: $height;
+		background: $url no-repeat center;
+	}
+	position: absolute;
+	bottom: $bottom;
+	left: $left;
+}
+@mixin btnbr($width,$height,$bottom,$right:0px,$url:none){
+	.btn{
+		width: $width;
+		height: $height;
+		background: $url no-repeat center;
+	}
+	position: absolute;
+	bottom: $bottom;
+	right: $right;
+}
+@mixin btnxt($width,$height,$top:0px,$url:none){
+	.btn{
+		width: $width;
+		height: $height;
+		background: $url no-repeat center;
+	}
+	position: absolute;
+	top: $top;
+	left: 50%;
+	margin-left: -($width)/2;
+}
+@mixin btnxb($width,$height,$bottom:0px,$url:none){
+	.btn{
+		width: $width;
+		height: $height;
+		background: $url no-repeat center;
+	}
+	position: absolute;
+	bottom: $bottom;
+	left: 50%;
+	margin-left: -($width)/2;
+}
+@mixin slideBtn($width,$height,$top,$url:none){
+	width: $width;
+	height: $height;
+	position: absolute;
+	top: $top;
+	background-image: $url;
+	background-repeat: no-repeat;
+	background-size: $width*2 $height;
+	&.swiper-button-prev{background-position: 0 0;}
+	&.swiper-button-next{background-position: -$width 0;}
+}
+@mixin font($fontSize,$lineHeight,$color,$fontFamily:"Microsoft YaHei"){
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	color: $color;
+	font-family: $fontFamily;
+}
+@mixin formFormat($width,$height,$background:none){
+	input, select{
+		position: absolute;
+		width: $width; height: $height;
+		background: none; border: none; background: $background;
+	}
+	input{
+		width: $width - 5px;
+		padding-left: 5px;
+	}
+}
+@mixin css3($property, $value) {
+	@each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+		#{$prefix}#{$property}: #{$value};
+	}
+}
+@mixin css3Wap($property, $value) {
+	@each $prefix in -webkit-, '' {
+		#{$prefix}#{$property}: #{$value};
+	}
+}
+@mixin animation($name,$duration,$timing-function,$delay,$iteration-count,$fill-mode){
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{animation}: #{$name} #{$duration} #{$timing-function} #{$delay} #{$iteration-count} #{$fill-mode};
+    }
+}
+@mixin animationWap($name,$duration,$timing-function,$delay,$iteration-count,$fill-mode){
+    @each $prefix in -webkit-, '' {
+        #{$prefix}#{animation}: #{$name} #{$duration} #{$timing-function} #{$delay} #{$iteration-count} #{$fill-mode};
+    }
+}
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@-o-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+@mixin keyframesWap($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
