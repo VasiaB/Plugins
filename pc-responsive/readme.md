@@ -1,7 +1,7 @@
 # 基于swiper的PC端的全屏自适应翻页 #
 
 ### DEMO ###
-[http://index.html](http://index.html)
+[demo](index.html)
 
 ### HTML Layout ###
 		<div class="swiper-container swiper-container-main">
