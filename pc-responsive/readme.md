@@ -1,6 +1,14 @@
 # 基于swiper的PC端的全屏自适应翻页 #
 
 ### HTML Layout ###
+		//头部引用
+		<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+
+		//尾部引用
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/idangerous.swiper.min.js"></script>
+		<script src="js/zoom.js"></script>
+
 		<div class="swiper-container swiper-container-main">
 		    <div class="swiper-wrapper">
 		        <div class="swiper-slide s">
@@ -48,3 +56,9 @@
 >bgResponsive(width,height)
 >
 >width和height分别为缩放区域的宽度和高度, 和css中.main的一致
+
+
+### 注意事项 ###
+1. contentResponsive(eleStr, zoom)和bgResponsive(width,height)根据页面需求可以分开调用
+2. pc端为兼容ie低版本使用了swiper2
+3. 须引用jquery
