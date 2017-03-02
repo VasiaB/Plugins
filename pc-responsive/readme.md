@@ -60,5 +60,5 @@
 
 ### 注意事项 ###
 1. contentResponsive(eleStr, zoom)和bgResponsive(width,height)根据页面需求可以分开调用
-2. pc端为兼容ie低版本使用了swiper2
+2. pc端为了兼容ie低版本使用了swiper2
 3. 须引用jquery
